@@ -15,7 +15,9 @@ services:
     volumes:
       - static:/static
     ports:
-      - "80:80"
+      - "8080:8080"
+    environment:
+      - VIRTUAL_HOST=marcioweb.com.br
     depends_on:
       - django_gunicorn
       - db
